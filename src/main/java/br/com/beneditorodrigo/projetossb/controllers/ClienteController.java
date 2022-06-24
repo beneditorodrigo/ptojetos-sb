@@ -4,18 +4,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-public class PrimeiroController {
+import br.com.beneditorodrigo.projetossb.models.Cliente;
 
-	@GetMapping(path = {"/ola", "/saudacao"})
-	public String ola() {
-		return "Olá Spring Boot";
+@RestController
+@RequestMapping("/clientes")
+public class ClienteController {
+
+	@GetMapping("/qualquer")
+	public Cliente obterCliente() {
+		return new Cliente(28, "Rodrigo", "123.654.789-10");
 	}
-	
-	@RequestMapping(path = {"/agradecimento", "/gratidao"})
-	public String agradecimento() {
-		return "Obrigado Deus";
-	}
-	
-	
 }
