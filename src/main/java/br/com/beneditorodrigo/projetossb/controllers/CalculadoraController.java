@@ -20,5 +20,13 @@ public class CalculadoraController {
 		return a - b;
 	}
 	
+	@GetMapping("/multiplicar/{x}/{y}")
+	public int multiplicar(@PathVariable int x, @PathVariable int y) {
+		return x * y;
+	}
 	
+	@GetMapping("/multiplicar")
+	public int multiplicar2(@RequestParam(name = "x") int x, @RequestParam(name = "y") int y) {
+		return x * y;
+	}
 }
