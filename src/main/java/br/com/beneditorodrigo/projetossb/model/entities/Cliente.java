@@ -1,4 +1,4 @@
-package br.com.beneditorodrigo.projetossb.models;
+package br.com.beneditorodrigo.projetossb.model.entities;
 
 public class Cliente {
 
